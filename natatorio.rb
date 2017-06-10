@@ -8,7 +8,6 @@
 def estadisticas(visitantes_del_dia)
   a = 0
   b = 0
-  c = 0
 
   visitantes_del_dia.each do |visitante|
     if visitante == "A"
