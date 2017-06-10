@@ -10,25 +10,29 @@ def estadisticas(visitantes_del_dia)
   b = 0
   c = 0
 
-  visitantes_del_dia.each do |visitante|
-    if visitante == "A"
+  i = 0
+
+  until visitantes_del_dia[i] == "."
+    if visitantes_del_dia[i] == "A"
       a = a + 1
     end
 
-    if visitante == "B"
+    if visitantes_del_dia[i] == "B"
       b = b + 1
     end
 
-    if visitante == "C"
+    if visitantes_del_dia[i] == "C"
       c = c + 1
     end
+
+    i = i + 1
   end
 
-  puts "A (Socios fundadores): #{a}"
-  puts "B (Socios Común): #{b}"
-  puts "C (No Socio): #{c}"
+  puts "A (Socios fundadores): = #{a}"
+  puts "B (Socios fundadores): = #{b}"
+  puts "C (Socios fundadores): = #{c}"
 end
 
-
-visitantes_del_dia = ["A", "A", "B", "C", "A", "C", "C", "C","B", "B", "B", "."]
+visitantes_del_dia = "AABCACCCBB."
 estadisticas(visitantes_del_dia)
+
